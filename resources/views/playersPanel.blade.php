@@ -9,23 +9,22 @@
     <div class="container">
         <div class="card mt-4">
             <div class="card-body">
-                <div class="form-group">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Enter first name">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
-                </div>
-                <div class="form-group">
-                    <label for="weapon">Weapon:</label>
-                    <input type="text" class="form-control" id="weapon" placeholder="Enter weapon">
-                </div>
-                <div class="form-group">
-                    <label for="team">Team:</label>
-                    <input type="text" class="form-control" id="team" placeholder="Enter team">
-                </div>
-                <button class="btn btn-primary" id="add-record">Add player</button>
+                <form action="{{ route('playersPanel') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="brand">Brand:</label>
+                        <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter brand" value="Tippman">
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model:</label>
+                        <input type="text" class="form-control" id="model" name="model" placeholder="Enter model" value="XYZ-123">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Type:</label>
+                        <input type="text" class="form-control" id="category" name="type" placeholder="Enter type" value="Woodball">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="add-record">Add weapon</button>
+                </form>
             </div>
         </div>
     </div>
@@ -49,6 +48,7 @@
                     <td>Eagles</td>
                     <td>
                         <button class="btn btn-danger btn-sm">Delete</button>
+                        <button class="btn btn-secondary btn-sm">Edit</button>
                     </td>
                 </tr>
                 <tr>
@@ -58,6 +58,7 @@
                     <td>Tigers</td>
                     <td>
                         <button class="btn btn-danger btn-sm">Delete</button>
+                        <button class="btn btn-secondary btn-sm">Edit</button>
                     </td>
                 </tr>
             </tbody>

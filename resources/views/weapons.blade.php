@@ -4,11 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Members </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
   <body style="background-color: rgb(167, 157, 146)">
-
     @include('include.headerLogin')
     <br/>
     <br/>

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function showLoginForm()
+    public function create()
     {
         return view('login');
     }
