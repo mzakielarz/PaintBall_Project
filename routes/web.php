@@ -15,10 +15,10 @@ use App\Models\Weapon;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
 Route::get('/layout', function () {
     return view('layout');
 });
@@ -27,11 +27,6 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-//Route::get('/login', [UserController::class, 'create'])->name('create');
-
-// Route::get('/registration', function () {
-//     return view('registration');
-// });
 
 Route::get('/main', function () {
     return view('mainpage');
