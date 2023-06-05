@@ -51,4 +51,26 @@ class WeaponController extends Controller
         // Redirect back with success message
         return redirect('/usersMenu/weaponsPanel');
     }
+
+
+    public function edit(string $id)
+    {
+        $weapon = Weapon::findOrFail($id);
+        return view('weaponsEdit',compact('weapon'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $weapon = Weapon::findOrFail($id);
+        $input = $request->all();
+
+        $weapon->update($input);
+
+        return redirect('usersMenu/weaponsPanel')->with('flash_message', 'Weapon Updated!');
+    }
+    public function showWeapons(){
+        $weapon=Weapon::all();
+        return view('weapons',['weapon'=>$weapon]);
+    }
+
 }

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WeaponController;
-
+use App\Models\Weapon;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,18 +29,18 @@ Route::get('/login', function () {
 
 //Route::get('/login', [UserController::class, 'create'])->name('create');
 
-Route::get('/registration', function () {
-    return view('registration');
-});
+// Route::get('/registration', function () {
+//     return view('registration');
+// });
+
 Route::get('/main', function () {
     return view('mainpage');
 })->name('mainpage');
 Route::get('main/members/', function () {
     return view('members');
 })-> name('members');
-Route::get('main/weapons/', function () {
-    return view('weapons');
-})->name('weapons');
+
+Route::get('main/weapons', [WeaponController::class, 'showWeapons'])->name('weapons');
 
 Route::get('usersMenu', function () {
     return view('usersMenu');
@@ -59,9 +59,12 @@ Route::get('/login', function () {
     return view('login');
 });
 
+
+Route::get('usersMenu/weaponsPanel/{id}/edit', [WeaponController::class, 'edit'])->name('weaponsEdit');
 Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy']);
 Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'store'])->name('weaponsPanel');
-//Route::get('/weapons/creata', [WeaponController::class, 'create'])->name('weaponsPanel');
 
-//Route::post('/weapons', 'WeaponController@store')->name('weapons.store');
+Route::patch('usersMenu/weaponsPanel/{id}', [WeaponController::class, 'update'])->name('weaponsUpdate');
+
+
 
