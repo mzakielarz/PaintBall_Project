@@ -9,21 +9,21 @@ use Illuminate\Http\Request;
 
 class WeaponController extends Controller
 {
-      /**
+    /**
      * Show the form for creating a new weapon.
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function weaponController()
     {
         $weapons = Weapon::all();
-        return view('weaponsPanel',['weapons'=>$weapons]);
-
+        return view('weaponsPanel', ['weapons' => $weapons]);
     }
-    public function destroy(Weapon $weapon)
+    public function destroy(string $id)
     {
+        $weapon = Weapon::findOrFail($id);
         $weapon->delete();
-        return redirect()->back();
+        return redirect()->route('weaponsPanel');
     }
 
     /**
@@ -32,7 +32,7 @@ class WeaponController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function addWeapon(Request $request)
     {
         // Validate the request data
         $validatedData = $request->validate([
@@ -49,28 +49,26 @@ class WeaponController extends Controller
         $weapon->save();
 
         // Redirect back with success message
-        return redirect('/usersMenu/weaponsPanel');
+        return redirect()->route('weaponsPanel');
     }
 
 
     public function edit(string $id)
     {
         $weapon = Weapon::findOrFail($id);
-        return view('weaponsEdit',compact('weapon'));
+        return view('weaponsEdit', compact('weapon'));
     }
 
     public function update(Request $request, string $id)
     {
         $weapon = Weapon::findOrFail($id);
         $input = $request->all();
-
         $weapon->update($input);
-
-        return redirect('usersMenu/weaponsPanel')->with('flash_message', 'Weapon Updated!');
+        return redirect()->route('weaponsPanel')->with('flash_message', 'Weapon Updated!');
     }
-    public function showWeapons(){
-        $weapon=Weapon::all();
-        return view('weapons',['weapon'=>$weapon]);
+    public function showWeapons()
+    {
+        $weapon = Weapon::all();
+        return view('weapons', ['weapon' => $weapon]);
     }
-
 }

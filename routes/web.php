@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WeaponController;
+use App\Http\Controllers\PlayerController;
 use App\Models\Weapon;
 
 /*
@@ -35,16 +36,20 @@ Route::get('usersMenu', function () {
 
 Route::post('usersMenu', [UserController::class, 'login'])->name('usersMenu');
 
-Route::get('usersMenu/playersPanel', function () {
-    return view('playersPanel');
-})->name('playersPanel');
+// Route::get('usersMenu/playersPanel', function () {
+//     return view('playersPanel');
+// })->name('playersPanel');
 
-Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'index'])->name('weaponsPanel');
+Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'weaponController'])->name('weaponsPanel');
 Route::get('usersMenu/weaponsPanel/{id}/edit', [WeaponController::class, 'edit'])->name('weaponsEdit');
-Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'store'])->name('weaponsPanel.post');
+Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'addWeapon'])->name('addWeapon');
 Route::patch('usersMenu/weaponsPanel/{id}', [WeaponController::class, 'update'])->name('weaponsUpdate');
-Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy']);
+Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy'])->name('deleteWeapon');
 
-
+Route::get('usersMenu/playersPanel', [PlayerController::class, 'playerController'])->name('playersPanel');
+Route::get('usersMenu/playersPanel/{id}/edit', [PlayerController::class, 'edit'])->name('playerEdit');
+Route::post('usersMenu/playersPanel', [PlayerController::class, 'addPlayer'])->name('addPlayer');
+Route::patch('usersMenu/playersPanel/{id}', [PlayerController::class, 'update'])->name('playersUpdate');
+Route::delete('usersMenu/playersPanel/{player}', [PlayerController::class, 'destroy'])->name('deletePlayer');
 
 
