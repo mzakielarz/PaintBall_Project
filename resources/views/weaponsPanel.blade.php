@@ -12,7 +12,7 @@
         <div class="card mt-4">
             <div class="card-body">
 
-                <form action="{{ route('weaponsPanel') }}" method="POST">
+                <form action="{{ route('weaponsPanel.post') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="brand">Brand:</label>

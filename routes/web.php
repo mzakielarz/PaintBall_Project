@@ -17,49 +17,34 @@ use App\Models\Weapon;
 */
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
-Route::get('/layout', function () {
-    return view('layout');
-});
-
-Route::get('/login', function () {
+Route::get('login', function () {
     return view('login');
 })->name('login');
 
-
-Route::get('/main', function () {
-    return view('mainpage');
-})->name('mainpage');
-Route::get('main/members/', function () {
+Route::get('members', function () {
     return view('members');
 })-> name('members');
 
-Route::get('main/weapons', [WeaponController::class, 'showWeapons'])->name('weapons');
+Route::get('weapons', [WeaponController::class, 'showWeapons'])->name('weapons');
 
 Route::get('usersMenu', function () {
     return view('usersMenu');
 })->name('usersMenu');
 
+Route::post('usersMenu', [UserController::class, 'login'])->name('usersMenu');
+
 Route::get('usersMenu/playersPanel', function () {
     return view('playersPanel');
 })->name('playersPanel');
 
-Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'index'])->name('index');
-
-
-
-Route::post('/usersMenu', [UserController::class, 'login'])->name('login');
-Route::get('/login', function () {
-    return view('login');
-});
-
-
+Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'index'])->name('weaponsPanel');
 Route::get('usersMenu/weaponsPanel/{id}/edit', [WeaponController::class, 'edit'])->name('weaponsEdit');
-Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy']);
-Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'store'])->name('weaponsPanel');
-
+Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'store'])->name('weaponsPanel.post');
 Route::patch('usersMenu/weaponsPanel/{id}', [WeaponController::class, 'update'])->name('weaponsUpdate');
+Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy']);
+
 
 
 

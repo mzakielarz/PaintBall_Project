@@ -36,7 +36,7 @@
     <div class="container">
 
         <a class="tile" href={{route('playersPanel')}}>Players Panel</a>
-        <a class="tile" href={{route('weaponsPanel')}}>Weapons Panel</a>
+        <a class="tile" href={{route('weaponsPanel.post')}}>Weapons Panel</a>
     </div>
 </body>
 </html>
