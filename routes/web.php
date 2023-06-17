@@ -24,9 +24,11 @@ Route::get('login', function () {
     return view('login');
 })->name('login');
 
-Route::get('members', function () {
-    return view('members');
-})-> name('members');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
+Route::get('players', function () {
+    return view('players');
+})-> name('players');
 
 Route::get('weapons', [WeaponController::class, 'showWeapons'])->name('weapons');
 
@@ -36,9 +38,11 @@ Route::get('usersMenu', function () {
 
 Route::post('usersMenu', [UserController::class, 'login'])->name('usersMenu');
 
-// Route::get('usersMenu/playersPanel', function () {
-//     return view('playersPanel');
-// })->name('playersPanel');
+Route::get('usersMenu/playersPanel', function () {
+    return view('playersPanel');
+})->name('playersPanel');
+
+Route::middleware([\App\Http\Middleware\Authorization::class])->group(function () {
 
 Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'weaponController'])->name('weaponsPanel');
 Route::get('usersMenu/weaponsPanel/{id}/edit', [WeaponController::class, 'edit'])->name('weaponsEdit');
@@ -51,5 +55,6 @@ Route::get('usersMenu/playersPanel/{id}/edit', [PlayerController::class, 'edit']
 Route::post('usersMenu/playersPanel', [PlayerController::class, 'addPlayer'])->name('addPlayer');
 Route::patch('usersMenu/playersPanel/{id}', [PlayerController::class, 'update'])->name('playersUpdate');
 Route::delete('usersMenu/playersPanel/{player}', [PlayerController::class, 'destroy'])->name('deletePlayer');
+});
 
 
