@@ -1,5 +1,10 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-right {
+            margin-left: auto;
+        }
+    </style>
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -18,17 +23,21 @@
                     <a class="nav-link" href="{{ route('weapons') }}">Weapons</a>
                 </li>
                 @if (Auth::check())
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">Sign out</a>
                     </li>
-                @endif
-                <li>
-                    @guest
+                @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
-                @endguest
-                </li>
+                @endif
+            </ul>
+            <ul class="navbar-nav navbar-right">
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('usersMenu') }}">Menu</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

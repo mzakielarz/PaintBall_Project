@@ -19,7 +19,6 @@ class Authorization
         if (Auth::check()) {
             return $next($request);
         }
-
         return abort(403, 'Unauthorized');
     }
 }
