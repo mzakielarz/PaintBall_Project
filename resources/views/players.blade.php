@@ -24,11 +24,15 @@
                 <th scope="col">Weapon</th>
             </tr>
         </thead>
-        <tbody>
+        @foreach ($players as $p)
             <tr>
-
-            </tr>
-        </tbody>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $p->firstname }}</td>
+                <td>{{ $p->lastname }}</td>
+                <td>{{ $p->team }}</td>
+                <td>{{ $p->weapon_id }}</td>
+        @endforeach
     </table>
 </body>
+
 </html>
