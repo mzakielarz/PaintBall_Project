@@ -31,6 +31,7 @@ Route::get('players', function () {
 })-> name('players');
 
 Route::get('weapons', [WeaponController::class, 'showWeapons'])->name('weapons');
+Route::get('players', [PlayerController::class, 'showPlayers'])->name('players');
 
 Route::get('usersMenu', function () {
     return view('usersMenu');

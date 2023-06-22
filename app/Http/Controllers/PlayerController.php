@@ -63,11 +63,19 @@ class PlayerController extends Controller
         $player->delete();
         return redirect()->route('playersPanel');
     }
+<<<<<<< HEAD
 
 
     public function showPlayers()
     {
         $players =Player::all();
         return view('players', ['player' => $players]);
+=======
+    public function showPlayers()
+    {
+        $players = Player::all();
+        $weapons = Weapon::all();
+        return view('players', compact('players', 'weapons'));
+>>>>>>> 724e39ea27dc262f01949d7ed23213d3da1c88b3
     }
 }
