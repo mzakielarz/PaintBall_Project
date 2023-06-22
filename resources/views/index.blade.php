@@ -6,7 +6,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/carousel.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    @include('include.headerLogin')
 
 
 
@@ -35,24 +36,25 @@
             height: auto;
             object-fit: cover;
         }
-    </style>
 
+        @font-face {
+            font-family: 'Cookie';
+            src: url('/fonts/Cookie-Regular.ttf') format('truetype');
+        }
+
+        .first-letter {
+            font-size: 3em;
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: 'Cookie', sans-serif;
+        }
+    </style>
 
 </head>
 
 <body>
-
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-        @include('include.headerLogin')
-    </head>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
     <main>
-
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -67,7 +69,8 @@
                     <img src="img/team1.jpg" class="carousel-image" alt="...">
                     <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.4)">
                         <h4>Experience the Thrill of Paintball</h4>
-                        <p>Engage in adrenaline-pumping battles and strategic gameplay with our paintball experiences.</p>
+                        <p>Engage in adrenaline-pumping battles and strategic gameplay with our paintball experiences.
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -96,16 +99,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
-
-
-        <!-- Marketing messaging and featurettes
-  ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
         <div class="container marketing">
 
-            <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4">
                     <img class="rounded-circle" width="140" height="140" src="img/circle1.jpg">
@@ -113,7 +108,7 @@
                     <p>Experience the thrill of paintball with our exhilarating game scenarios and state-of-the-art
                         equipment.</p>
 
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" width="140" height="140" src="img/circle2.jpg">
 
@@ -121,7 +116,7 @@
                     <p>Challenge your friends to intense paintball matches and see who emerges as the ultimate champion.
                     </p>
 
-                </div><!-- /.col-lg-4 -->
+                </div>
                 <div class="col-lg-4">
                     <img class="rounded-circle" width="140" height="140" src="img/circle3.jpg">
 
@@ -129,73 +124,65 @@
                     <p>Unleash your competitive spirit and experience the excitement of paintball action like never
                         before.</p>
 
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-
-
-            <!-- START THE FEATURETTES -->
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading" style="color: yellow">Experience the Adrenaline Rush. Get in the
-                        game.</h2>
-                    <p class="lead">Engage in heart-pounding battles and navigate thrilling paintball scenarios that
-                        will keep you on the edge of your seat.</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="img/bottom1.jpg">
-
                 </div>
             </div>
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">E</span>xperience
+                        the Adrenaline Rush. Get in the game.</h2>
+                    <p class="lead">Engage in heart-pounding battles and navigate thrilling paintball scenarios that
+                        will keep you on the edge of your seat.</p>
+                </div>
+                <div class="col-md-5 text-end">
+                    <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="img/bottom1.jpg">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading" style="color: yellow">Test Your Skills and Strategy. Victory awaits.
+                    <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">T</span>est Your
+                        Skills and Strategy. Victory awaits.
                     </h2>
                     <p class="lead">Showcase your tactical prowess and teamwork as you engage in thrilling paintball
                         battles with friends and opponents.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" width="500" height="500" src="img/bottom2.jpg">
+                    <img class="featurette-image img-fluid mx-auto" width="500" height="500"
+                        src="img/bottom2.jpg">
 
                 </div>
             </div>
 
             <hr class="featurette-divider">
 
-            <div class="row featurette">
+            <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading" style="color: yellow">Create Unforgettable Memories. Capture the
-                        moment.</h2>
+                    <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">C</span>reate
+                        Unforgettable Memories. Capture the moment.</h2>
                     <p class="lead">Immerse yourself in the thrilling world of paintball and create lasting memories
                         filled with excitement, laughter, and camaraderie.</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 text-end">
                     <img class="featurette-image img-fluid mx-auto" width="500" height="500"
                         src="img/bottom3.jpg">
-
                 </div>
             </div>
 
             <hr class="featurette-divider">
 
-            <!-- /END THE FEATURETTES -->
+        </div>
 
-        </div><!-- /.container -->
-
-
-        <!-- FOOTER -->
         <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
             <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a
                     href="#">Terms</a></p>
         </footer>
     </main>
-
 </body>
 
 </html>
