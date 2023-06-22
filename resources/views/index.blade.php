@@ -31,11 +31,16 @@
             color: white !important;
         }
 
+<<<<<<< HEAD
         .carousel-image {
             max-width: 100%;
             height: auto;
             object-fit: cover;
         }
+=======
+
+    </style>
+>>>>>>> master
 
         @font-face {
             font-family: 'Cookie';
@@ -108,8 +113,13 @@
                     <p>Experience the thrill of paintball with our exhilarating game scenarios and state-of-the-art
                         equipment.</p>
 
+<<<<<<< HEAD
                 </div>
                 <div class="col-lg-4">
+=======
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4" >
+>>>>>>> master
                     <img class="rounded-circle" width="140" height="140" src="img/circle2.jpg">
 
                     <h2 style="color: yellow">Challenge</h2>
@@ -129,11 +139,19 @@
 
             <hr class="featurette-divider">
 
+<<<<<<< HEAD
             <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
                 <div class="col-md-7">
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">E</span>xperience
                         the Adrenaline Rush. Get in the game.</h2>
                     <p class="lead">Engage in heart-pounding battles and navigate thrilling paintball scenarios that
+=======
+            <div class="row featurette">
+                <div class="col-md-7" style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h1 class="featurette-heading" style="color: yellow; "   >Experience the Adrenaline Rush. Get in the
+                        game.</h1>
+                    <p class="lead" style="font-size: 40px">Engage in heart-pounding battles and navigate thrilling paintball scenarios that
+>>>>>>> master
                         will keep you on the edge of your seat.</p>
                 </div>
                 <div class="col-md-5 text-end">
@@ -143,10 +161,16 @@
 
             <hr class="featurette-divider">
 
+<<<<<<< HEAD
             <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
                 <div class="col-md-7 order-md-2">
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">T</span>est Your
                         Skills and Strategy. Victory awaits.
+=======
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2" style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h2 class="featurette-heading" style="color: yellow">Test Your Skills and Strategy. Victory awaits.
+>>>>>>> master
                     </h2>
                     <p class="lead">Showcase your tactical prowess and teamwork as you engage in thrilling paintball
                         battles with friends and opponents.</p>
@@ -160,10 +184,17 @@
 
             <hr class="featurette-divider">
 
+<<<<<<< HEAD
             <div class="row featurette" style="background-color: rgba(255, 255, 255, 0.1)">
                 <div class="col-md-7">
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">C</span>reate
                         Unforgettable Memories. Capture the moment.</h2>
+=======
+            <div class="row featurette">
+                <div class="col-md-7" style="background-color: rgba(255, 255, 255, 0.05)">
+                    <h5 class="featurette-heading" style="color: yellow">Create Unforgettable Memories. Capture the
+                        moment.</h5>
+>>>>>>> master
                     <p class="lead">Immerse yourself in the thrilling world of paintball and create lasting memories
                         filled with excitement, laughter, and camaraderie.</p>
                 </div>
