@@ -55,6 +55,7 @@ Route::get('usersMenu/playersPanel/{id}/edit', [PlayerController::class, 'edit']
 Route::post('usersMenu/playersPanel', [PlayerController::class, 'addPlayer'])->name('addPlayer');
 Route::patch('usersMenu/playersPanel/{id}', [PlayerController::class, 'update'])->name('playersUpdate');
 Route::delete('usersMenu/playersPanel/{player}', [PlayerController::class, 'destroy'])->name('deletePlayer');
+Route::get('players', [PlayerController::class, 'showPlayers'])->name('players');
 });
 
 

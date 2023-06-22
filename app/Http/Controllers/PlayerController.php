@@ -63,4 +63,11 @@ class PlayerController extends Controller
         $player->delete();
         return redirect()->route('playersPanel');
     }
+
+
+    public function showPlayers()
+    {
+        $players =Player::all();
+        return view('players', ['player' => $players]);
+    }
 }
