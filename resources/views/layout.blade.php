@@ -6,7 +6,7 @@
     <title> @yield('title','Paintball auth') </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body style="background-image: url('/images/maska.jpg');">
+  <body style="">
     @include('include.headerLogin')
     @yield('content')
 
