@@ -31,6 +31,7 @@
                 <td>{{ $p->lastname }}</td>
                 <td>{{ $p->team }}</td>
                 <td>{{ $p->weapon_id }}</td>
+            </tr>
         @endforeach
     </table>
 </body>

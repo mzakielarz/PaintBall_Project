@@ -53,6 +53,11 @@
 </head>
 
 <body>
+    @if (session('logout'))
+        <div class="alert alert-success">
+            {{ session('logout') }}
+        </div>
+    @endif
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <main>
         <div id="carouselExampleCaptions" class="carousel slide">
@@ -133,6 +138,7 @@
                 <div class="col-md-7">
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">E</span>xperience
                         the Adrenaline Rush. Get in the game.</h2>
+                    <br />
                     <p class="lead">Engage in heart-pounding battles and navigate thrilling paintball scenarios that
                         will keep you on the edge of your seat.</p>
                 </div>
@@ -148,6 +154,8 @@
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">T</span>est Your
                         Skills and Strategy. Victory awaits.
                     </h2>
+                    <br />
+
                     <p class="lead">Showcase your tactical prowess and teamwork as you engage in thrilling paintball
                         battles with friends and opponents.</p>
                 </div>
@@ -164,6 +172,8 @@
                 <div class="col-md-7">
                     <h2 class="featurette-heading" style="color: yellow"><span class="first-letter">C</span>reate
                         Unforgettable Memories. Capture the moment.</h2>
+                    <br />
+
                     <p class="lead">Immerse yourself in the thrilling world of paintball and create lasting memories
                         filled with excitement, laughter, and camaraderie.</p>
                 </div>

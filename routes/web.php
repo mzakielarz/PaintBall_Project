@@ -48,6 +48,7 @@ Route::middleware([\App\Http\Middleware\Authorization::class])->group(function (
 Route::get('usersMenu/weaponsPanel', [WeaponController::class, 'weaponController'])->name('weaponsPanel');
 Route::get('usersMenu/weaponsPanel/{id}/edit', [WeaponController::class, 'edit'])->name('weaponsEdit');
 Route::post('usersMenu/weaponsPanel', [WeaponController::class, 'addWeapon'])->name('addWeapon');
+Route::post('usersMenu/weaponsPanel/{id}/restore', [WeaponController::class, 'restore'])->name('weaponRestore');
 Route::patch('usersMenu/weaponsPanel/{id}', [WeaponController::class, 'update'])->name('weaponsUpdate');
 Route::delete('usersMenu/weaponsPanel/{weapon}',[WeaponController::class, 'destroy'])->name('deleteWeapon');
 
