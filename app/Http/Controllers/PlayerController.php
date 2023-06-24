@@ -12,7 +12,7 @@ class PlayerController extends Controller
 {
     public function playerController()
     {
-        $players = Player::all();
+        $players = Player::paginate(5);
         $weapons = Weapon::all();
         return view('playersPanel', compact('players', 'weapons'));
     }
@@ -36,7 +36,7 @@ class PlayerController extends Controller
         $player->team = $request->input('team');
         $player->save();
 
-        return redirect()->route('playersPanel');
+        return redirect()->route('playersPanel')->with('add', 'Player Added!');
     }
 
     public function edit(string $id)
@@ -54,14 +54,14 @@ class PlayerController extends Controller
         $player->weapon_id = $request->input('weapon');
         $player->team = $request->input('team');
         $player->save();
-        return redirect()->route('playersPanel');
+        return redirect()->route('playersPanel')->with('update', 'Player Updated!');
     }
 
     public function destroy(string $id)
     {
         $player = Player::findOrFail($id);
         $player->delete();
-        return redirect()->route('playersPanel');
+        return redirect()->route('playersPanel')->with('delete', 'Player Deleted!');
     }
 
     public function showPlayers()

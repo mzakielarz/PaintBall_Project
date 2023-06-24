@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -17,11 +18,9 @@ class UserController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Logowanie udane
-            return redirect()->route('usersMenu');
+            return redirect()->route('usersMenu')->with('correct', 'Logged in successfully!');
         } else {
-            // Logowanie nieudane
-            return redirect()->back()->withErrors(['email' => 'Nieprawidłowe dane logowania.'])->withInput();
+            return redirect()->back()->with('incorrect', 'The email or password is incorrect.');
         }
     }
 
@@ -29,6 +28,6 @@ class UserController extends Controller
     {
         FacadesSession::flush();
         Auth::logout();
-        return redirect(route('index'));
+        return redirect(route('index'))->with('logout', 'Signed out successfully!');
     }
 }
