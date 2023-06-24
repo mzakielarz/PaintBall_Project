@@ -8,21 +8,27 @@
 
     <style>
         body {
-            background-color: #0A2647 !important;
+            background-color:rgb(51, 48, 48) !important;
             color: white !important;
         }
 
-        table.table {
-            background-color: #205295 !important;
-            color: white !important;
+        .table th,
+        .table td {
+            color: white;
         }
 
-        table.table-striped tbody tr:nth-of-type(odd) {
-            background-color: #2C74B3 !important;
+
+        .table {
+            background-color: black ;
         }
+
+
+        .table thead th {
+            background-color: gray ;
+        }
+
     </style>
 
-    <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -33,10 +39,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Brand</th>
-                <th scope="col">Model</th>
-                <th scope="col">Type</th>
+                <th scope="col"><span style="color: yellow">#</span></th>
+                <th scope="col"><span style="color: yellow">Brand</span></th>
+                <th scope="col"><span style="color: yellow">Model</span></th>
+                <th scope="col"><span style="color: yellow">Type</span></th>
             </tr>
         </thead>
         @foreach ($weapon as $w)
