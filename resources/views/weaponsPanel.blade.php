@@ -4,10 +4,29 @@
 <head>
     <title>Weapons Panel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
 
+        .table th,
+        .table td {
+            color: white;
+        }
+
+
+        .table {
+            background-color: black;
+        }
+
+
+        .table thead th {
+            background-color: gray;
+        }
+
+
+
+    </style>
 </head>
 
-<body style="background-color: rgb(167, 157, 146);">
+<body style="background-color:rgb(51, 48, 48)">
     @include('include.headerLogin')
 
     @if (session('add'))
@@ -63,6 +82,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary" id="add-record">Add weapon</button>
                 </form>
+
             </div>
         </div>
     </div>
@@ -71,10 +91,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Brand</th>
-                    <th scope="col">Model</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col"><span style="color: yellow">Brand</span></th>
+                    <th scope="col"><span style="color: yellow">Model</span></th>
+                    <th scope="col"><span style="color: yellow">Type</span></th>
+                    <th scope="col"><span style="color: yellow">Actions</span></th>
                 </tr>
             </thead>
             <tbody>

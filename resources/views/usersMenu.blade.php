@@ -14,37 +14,55 @@
 
         .tile {
             display: block;
+            position: relative;
             width: 300px;
             height: 300px;
             margin: 10px;
-            background-color: #ccc;
             text-align: center;
-            line-height: 300px;
             font-size: 24px;
             text-decoration: none;
             color: #fff;
+            overflow: hidden;
         }
 
-        .tile:hover {
-            background-color: #999;
+        .tile::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tile:hover::after {
+            opacity: 1;
+        }
+
+        .tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
-
-
 </head>
 
-<body style=" background-color: rgb(167, 157, 146);">
+<body style="background-color:rgb(51, 48, 48)">
     @include('include.headerLogin')
 
     @if (session('correct'))
-        <div class="alert alert-success">
-            {{ session('correct') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('correct') }}
+    </div>
     @endif
 
     <div class="container">
-        <a class="tile" href={{ route('playersPanel') }}>Players Panel</a>
-        <a class="tile" href={{ route('addWeapon') }}>Weapons Panel</a>
+        <a class="tile" href={{ route('playersPanel') }} data-text="Players Panel">
+            <img src="img/players_panel.jpg" alt="Players Panel">
+        </a>
+        <a class="tile" href={{ route('addWeapon') }} data-text="Weapons Panel">
+            <img src="img/weapons_panel.jpg" alt="Weapons Panel">
+        </a>
     </div>
 </body>
 

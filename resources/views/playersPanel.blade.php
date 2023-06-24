@@ -5,9 +5,29 @@
     <title>Players Panel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     @include('include.headerLogin')
+
+    <style>
+         .table th,
+        .table td {
+            color: white;
+        }
+
+
+        .table {
+            background-color: black;
+        }
+
+
+        .table thead th {
+            background-color: gray;
+        }
+
+
+    </style>
+
 </head>
 
-<body style="background-color: rgb(167, 157, 146);">
+<body style="background-color:rgb(51, 48, 48)">
 
     @if (session('delete'))
         <div class="alert alert-success">
@@ -66,11 +86,11 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Weapon</th>
-                    <th scope="col">Team</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col"><span style="color: yellow"> Name</span></th>
+                    <th scope="col"><span style="color: yellow"> Last Name</span></th>
+                    <th scope="col"><span style="color: yellow"> Weapon</span></th>
+                    <th scope="col"><span style="color: yellow"> Team</span></th>
+                    <th scope="col"><span style="color: yellow"> Actions</span></th>
                 </tr>
             </thead>
             <tbody>

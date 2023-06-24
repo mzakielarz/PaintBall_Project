@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     @include('include.headerLogin')
 </head>
-<body style="background-color: rgb(167, 157, 146);">
+<body style="background-color:rgb(51, 48, 48)">
     <div class="container">
         <div class="card mt-4">
             <div class="card-body">
