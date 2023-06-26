@@ -4,26 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Members </title>
+    <title> Players </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     @include('include.headerLogin')
-
     <style>
-          .table th,
+         .table th,
         .table td {
             color: white;
         }
 
 
         .table {
-            background-color: black;
+            background-color: black ;
         }
 
 
         .table thead th {
-            background-color: gray;
+            background-color: gray ;
         }
+
     </style>
+
+
 </head>
 
 <body style="background-color:rgb(51, 48, 48)">
@@ -31,7 +33,7 @@
     <br />
     <br />
 
-    <table class="table table-dark table-striped">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col"><span style="color: yellow">#</span></th>
