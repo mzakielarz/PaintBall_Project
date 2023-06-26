@@ -4,7 +4,6 @@
 <head>
     <title>Players Panel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    @include('include.headerLogin')
 
     <style>
          .table th,
@@ -28,6 +27,7 @@
 </head>
 
 <body style="background-color:rgb(51, 48, 48)">
+    @include('include.header')
 
     @if (session('delete'))
         <div class="alert alert-success">
@@ -56,12 +56,12 @@
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <input type="text" class="form-control" id="firstName" name="firstName"
-                            placeholder="Enter First Name" value="John">
+                            placeholder="Enter First Name" value="">
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name:</label>
                         <input type="text" class="form-control" id="lastName" name="lastName"
-                            placeholder="Enter Last Name" value="Doe">
+                            placeholder="Enter Last Name" value="">
                     </div>
                     <div class="form-group">
                         <label for="weapon">Weapon:</label>
@@ -74,7 +74,7 @@
                     <div class="form-group">
                         <label for="team">Team:</label>
                         <input type="text" class="form-control" id="team" name="team"
-                            placeholder="Enter team" value="Eagles">
+                            placeholder="Enter team" value="">
                     </div>
                     <button type="submit" class="btn btn-primary" id="add-record">Add player</button>
                 </form>

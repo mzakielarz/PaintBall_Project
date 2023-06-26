@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Players </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    @include('include.headerLogin')
     <style>
          .table th,
         .table td {
@@ -29,7 +28,7 @@
 </head>
 
 <body style="background-color:rgb(51, 48, 48)">
-
+    @include('include.header')
     <br />
     <br />
 

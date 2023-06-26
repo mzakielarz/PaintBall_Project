@@ -33,7 +33,7 @@
 </head>
 
 <body style="background-color: rgb(167, 157, 146)">
-    @include('include.headerLogin')
+    @include('include.header')
     <br />
     <br />
     <table class="table">

@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/carousel.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    @include('include.headerLogin')
 
 
 
@@ -53,6 +52,8 @@
 </head>
 
 <body>
+    @include('include.header')
+
     @if (session('logout'))
         <div class="alert alert-success">
             {{ session('logout') }}

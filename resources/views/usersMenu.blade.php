@@ -48,7 +48,7 @@
 </head>
 
 <body style="background-color:rgb(51, 48, 48)">
-    @include('include.headerLogin')
+    @include('include.header')
 
     @if (session('correct'))
     <div class="alert alert-success">

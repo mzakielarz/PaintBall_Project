@@ -11,23 +11,19 @@
             color: white;
         }
 
-
         .table {
             background-color: black;
         }
-
 
         .table thead th {
             background-color: gray;
         }
 
-
-
     </style>
 </head>
 
 <body style="background-color:rgb(51, 48, 48)">
-    @include('include.headerLogin')
+    @include('include.header')
 
     @if (session('add'))
         <div class="alert alert-success">
@@ -68,17 +64,17 @@
                     <div class="form-group">
                         <label for="brand">Brand:</label>
                         <input type="text" class="form-control" id="brand" name="brand"
-                            placeholder="Enter brand" value="Tippman">
+                            placeholder="Enter brand" value="">
                     </div>
                     <div class="form-group">
                         <label for="model">Model:</label>
                         <input type="text" class="form-control" id="model" name="model"
-                            placeholder="Enter model" value="XYZ-123">
+                            placeholder="Enter model" value="">
                     </div>
                     <div class="form-group">
                         <label for="category">Type:</label>
                         <input type="text" class="form-control" id="category" name="type"
-                            placeholder="Enter type" value="Woodball">
+                            placeholder="Enter type" value="">
                     </div>
                     <button type="submit" class="btn btn-primary" id="add-record">Add weapon</button>
                 </form>
